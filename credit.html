@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,viewport-fit=cover"
+        />
+        <meta name="theme-color" content="#0d1117" />
+        <title>Credits — LiveCodeツ</title>
+        <style>
+            :root {
+                --bg-top: #0d1117;
+                --bg-bottom: #070a0f;
+                --card: #161b22;
+                --card-soft: #1c2128;
+                --border: #30363d;
+                --border-soft: #242a31;
+                --fg: #e6edf3;
+                --fg-muted: #8b949e;
+                --fg-dim: #6e7681;
+                --accent: #58a6ff;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: #070a0f;
+                color: var(--fg);
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+
+            body {
+                min-height: 100vh;
+                background:
+                    radial-gradient(
+                        1200px 800px at 50% -200px,
+                        rgba(88, 166, 255, 0.08),
+                        transparent 60%
+                    ),
+                    linear-gradient(
+                        180deg,
+                        var(--bg-top) 0%,
+                        var(--bg-bottom) 100%
+                    );
+                background-attachment: fixed;
+                line-height: 1.6;
+                font-size: 15px;
+            }
+
+            .wrap {
+                max-width: 680px;
+                margin: 0 auto;
+                padding: 64px 24px 96px;
+            }
+
+            /* ---------- header ---------- */
+
+            .kicker {
+                font-size: 11px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--fg-dim);
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                margin: 0 0 8px;
+                color: var(--fg);
+            }
+
+            .subtitle {
+                color: var(--fg-muted);
+                font-size: 14px;
+                margin: 0 0 40px;
+            }
+
+            /* ---------- creator card ---------- */
+
+            .creator {
+                background: linear-gradient(
+                    180deg,
+                    var(--card) 0%,
+                    var(--card-soft) 100%
+                );
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 28px 24px;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .avatar {
+                width: 68px;
+                height: 68px;
+                border-radius: 50%;
+                overflow: hidden;
+                flex: 0 0 auto;
+                background: #0d1117;
+                border: 1px solid var(--border);
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            }
+
+            .avatar img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .creator-body {
+                min-width: 0;
+                flex: 1 1 auto;
+            }
+
+            .creator-name {
+                font-size: 19px;
+                font-weight: 600;
+                margin: 0 0 4px;
+                word-break: break-word;
+            }
+
+            .creator-role {
+                font-size: 13px;
+                color: var(--fg-muted);
+                margin: 0;
+            }
+
+            /* ---------- sections ---------- */
+
+            section {
+                margin-top: 44px;
+            }
+
+            h2 {
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--fg-dim);
+                margin: 0 0 16px;
+            }
+
+            /* ---------- list card ---------- */
+
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border-soft);
+                border-radius: 12px;
+                padding: 4px 0;
+                overflow: hidden;
+            }
+
+            .row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 14px;
+                padding: 13px 18px;
+                border-bottom: 1px solid var(--border-soft);
+                font-size: 14px;
+            }
+
+            .row:last-child {
+                border-bottom: 0;
+            }
+
+            .row .name {
+                font-weight: 500;
+                color: var(--fg);
+            }
+
+            .row .tag {
+                font-size: 12px;
+                color: var(--fg-muted);
+                background: rgba(255, 255, 255, 0.04);
+                padding: 3px 10px;
+                border-radius: 999px;
+                border: 1px solid var(--border-soft);
+                white-space: nowrap;
+            }
+
+            /* ---------- gun park tribute ---------- */
+
+            .tribute {
+                background: var(--card);
+                border: 1px solid var(--border-soft);
+                border-radius: 12px;
+                overflow: hidden;
+            }
+
+            .tribute-image {
+                width: 100%;
+                display: block;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                filter: brightness(0.92) contrast(1.05);
+            }
+
+            .tribute-image-wrap {
+                position: relative;
+                background: #000;
+            }
+
+            .tribute-image-wrap::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    180deg,
+                    transparent 60%,
+                    rgba(13, 17, 23, 0.9) 100%
+                );
+                pointer-events: none;
+            }
+
+            .tribute-body {
+                padding: 24px 22px;
+            }
+
+            .tribute-quote {
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: var(--fg);
+                margin: 0 0 6px;
+                line-height: 1.5;
+            }
+
+            .tribute-attrib {
+                font-size: 12.5px;
+                color: var(--fg-dim);
+                margin: 0 0 18px;
+            }
+
+            .tribute p {
+                margin: 0 0 12px;
+                color: var(--fg-muted);
+                font-size: 14px;
+            }
+
+            .tribute p:last-child {
+                margin-bottom: 0;
+            }
+
+            /* ---------- story ---------- */
+
+            .story {
+                background: var(--card);
+                border: 1px solid var(--border-soft);
+                border-radius: 12px;
+                padding: 22px;
+                font-size: 14px;
+                color: var(--fg-muted);
+            }
+
+            .story p {
+                margin: 0 0 12px;
+            }
+            .story p:last-child {
+                margin-bottom: 0;
+            }
+
+            .story ol {
+                margin: 0;
+                padding-left: 22px;
+            }
+            .story ol li {
+                margin-bottom: 10px;
+                padding-left: 4px;
+            }
+            .story ol li:last-child {
+                margin-bottom: 0;
+            }
+
+            .story ul {
+                margin: 0;
+                padding-left: 22px;
+            }
+            .story ul li {
+                margin-bottom: 10px;
+                padding-left: 4px;
+            }
+            .story ul li:last-child {
+                margin-bottom: 0;
+            }
+
+            .story strong {
+                color: var(--fg);
+                font-weight: 500;
+            }
+
+            /* ---------- footer ---------- */
+
+            footer {
+                margin-top: 56px;
+                padding-top: 24px;
+                border-top: 1px solid var(--border-soft);
+                font-size: 12.5px;
+                color: var(--fg-dim);
+                text-align: center;
+                line-height: 1.7;
+            }
+
+            footer .dot {
+                display: inline-block;
+                margin: 0 8px;
+                color: var(--border);
+            }
+
+            @media (max-width: 480px) {
+                .wrap {
+                    padding: 48px 18px 80px;
+                }
+                h1 {
+                    font-size: 24px;
+                }
+                .creator {
+                    padding: 22px 18px;
+                    gap: 16px;
+                }
+                .avatar {
+                    width: 58px;
+                    height: 58px;
+                }
+                .row {
+                    padding: 12px 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="kicker">Credits</div>
+            <h1>LiveCodeツ</h1>
+            <p class="subtitle">
+                An offline code editor for Android, built for a physical
+                keyboard.
+            </p>
+
+            <!-- ============ CREATOR ============ -->
+            <div class="creator">
+                <div class="avatar">
+                    <img src="aliar.jpg" alt="ALIAR" />
+                </div>
+                <div class="creator-body">
+                    <p class="creator-name">乡ＡＬＩＡＲツ</p>
+                    <p class="creator-role">
+                        Creator · Designer · Idea, layout and every feature
+                    </p>
+                </div>
+            </div>
+
+            <!-- ============ GUN PARK TRIBUTE ============ -->
+            <section>
+                <h2>In honour of a mentality</h2>
+                <div class="tribute">
+                    <div class="tribute-image-wrap">
+                        <img
+                            src="gun-park.jpg"
+                            alt="Gun Park"
+                            class="tribute-image"
+                        />
+                    </div>
+                    <div class="tribute-body">
+                        <p class="tribute-quote">
+                            "The world only cares about results."
+                        </p>
+                        <p class="tribute-attrib">— Gun Park, Lookism</p>
+                        <p>
+                            The discipline to train when no one is watching. The
+                            patience to wait for the right moment. The refusal
+                            to give up, no matter how many times the world
+                            knocks you down.
+                        </p>
+                        <p>
+                            That is the mindset this app was built with. Every
+                            shortcut, every feature, every late night spent
+                            figuring out why something did not work — it was
+                            built on the same principle Gun lives by:
+                            <strong>results, not intentions.</strong>
+                        </p>
+                        <p>
+                            This page carries a small piece of that spirit. Not
+                            the violence. Not the darkness. Just the unbreakable
+                            will.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ CODE ASSISTANCE ============ -->
+            <section>
+                <h2>Code written with assistance from</h2>
+                <div class="card">
+                    <div class="row">
+                        <span class="name">Claude</span>
+                        <span class="tag">≈ 35% · Anthropic</span>
+                    </div>
+                    <div class="row">
+                        <span class="name">Grok</span>
+                        <span class="tag">≈ 30% · xAI</span>
+                    </div>
+                    <div class="row">
+                        <span class="name">DeepSeek</span>
+                        <span class="tag">≈ 30% · DeepSeek</span>
+                    </div>
+                    <div class="row">
+                        <span class="name">Microsoft Copilot</span>
+                        <span class="tag">≈ 2% · Microsoft</span>
+                    </div>
+                    <div class="row">
+                        <span class="name">Gemini</span>
+                        <span class="tag">≈ 2% · Google</span>
+                    </div>
+                    <div class="row">
+                        <span class="name">ChatGPT</span>
+                        <span class="tag">≈ 1% · OpenAI</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ WHY IT EXISTS ============ -->
+            <section>
+                <h2>Why this app exists</h2>
+                <div class="story">
+                    <ol>
+                        <li>
+                            Coding on Android's on-screen keyboard was
+                            <strong>far too slow</strong>
+                            for real work. A physical keyboard was the only way
+                            to type at a usable speed.
+                        </li>
+                        <li>
+                            Once a physical keyboard was plugged in, the next
+                            wall appeared: existing Android code editors did not
+                            honour <strong>keyboard shortcuts</strong>. Every
+                            action still required tapping the screen.
+                        </li>
+                        <li>
+                            Every editor tried had a
+                            <strong>header and a footer</strong>. On a phone
+                            that is up to a fifth of the screen wasted on title
+                            bars before a single line of code is written.
+                        </li>
+                        <li>
+                            There was no way to
+                            <strong>zoom the code or the preview</strong> with a
+                            pinch. The font size was fixed.
+                        </li>
+                        <li>
+                            Live preview required an
+                            <strong
+                                >internet connection or a running server</strong
+                            >. Even then, saving reloaded the whole page and
+                            jumped back to the top.
+                        </li>
+                        <li>
+                            There was no way to test a page at
+                            <strong>different screen sizes</strong>
+                            — phone, tablet, laptop — inside the editor.
+                        </li>
+                        <li>
+                            No Emmet. No
+                            <strong
+                                >auto-closing tags, auto-renaming matched tags,
+                                or stair indentation</strong
+                            >
+                            between <code>&lt;body&gt;&lt;/body&gt;</code> or
+                            <code>{ }</code>.
+                        </li>
+                        <li>
+                            No <strong>code formatter</strong>. No offline
+                            formatting for HTML, CSS, or JS.
+                        </li>
+                        <li>
+                            No real <strong>project system</strong> — no
+                            folders, no images, no CSS or JS files that the
+                            preview could pick up automatically.
+                        </li>
+                        <li>
+                            No <strong>settings panel</strong> that let any of
+                            this be controlled without editing the app's own
+                            code.
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ============ WHAT IT IS ============ -->
+            <section>
+                <h2>What was built</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        <strong>LiveCodeツ</strong> is a fullscreen, offline code
+                        editor for Android, designed from the ground up around a
+                        physical keyboard. It is not a wrapper around another
+                        editor and it is not a web page that pretends to be an
+                        app. It is a self-contained tool that runs from a single
+                        folder on the phone, needs no internet, needs no build
+                        step, and never phones home.
+                    </p>
+                    <p>
+                        Everything below is a real, working feature in the app.
+                        Nothing on this list is planned, promised, or borrowed
+                        from a marketing page.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ============ LIVE PREVIEW ============ -->
+            <section>
+                <h2>Live preview — the heart of the app</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        The preview is what makes this editor different from
+                        every other code editor on Android. It does not wait for
+                        a save, it does not reload, and it does not lose your
+                        place.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Updates on every keystroke.</strong> Type a
+                            letter, change a colour, delete a line — the preview
+                            shows the change immediately. No button, no save,
+                            no delay.
+                        </li>
+                        <li>
+                            <strong>Never reloads the page.</strong> The DOM is
+                            patched in place — only the parts that actually
+                            changed are touched. This is why typing in a list
+                            does not flash the whole page.
+                        </li>
+                        <li>
+                            <strong>Preserves scroll position.</strong> If you
+                            are looking at the bottom of a long page and type at
+                            the top, the preview stays scrolled where you were.
+                            It does not jump to the top on every edit.
+                        </li>
+                        <li>
+                            <strong>Preserves zoom and scale.</strong> If you
+                            zoomed the preview out to 50% to see the whole page,
+                            it stays at 50% through every keystroke.
+                        </li>
+                        <li>
+                            <strong>Script-aware reloading.</strong> Only
+                            changes to <code>&lt;script&gt;</code> tags trigger a
+                            real reload, because script content cannot be
+                            patched safely. Everything else — HTML, CSS, text,
+                            attributes — is patched live.
+                        </li>
+                        <li>
+                            <strong>Pinch to zoom.</strong> Two fingers inside
+                            the preview zooms in and out, just like a photo.
+                        </li>
+                        <li>
+                            <strong>Adjustable size.</strong> Set the preview to
+                            any width and height you want, either by number or
+                            by slider. Sliders go from 100 to 2400 pixels.
+                        </li>
+                        <li>
+                            <strong>Device presets.</strong> One tap switches
+                            the preview to Auto, Phone (375×667), Tablet
+                            (768×1024), or Laptop (1280×800) — the exact sizes
+                            you need to test responsive layouts.
+                        </li>
+                        <li>
+                            <strong>Fit, Rotate, Reload.</strong> Fit scales the
+                            page to fill the pane. Rotate swaps width and
+                            height. Reload forces a full rebuild when you want
+                            one.
+                        </li>
+                        <li>
+                            <strong>Live project assets.</strong> CSS files are
+                            inlined as <code>&lt;style&gt;</code>, JS files as
+                            <code>&lt;script&gt;</code>, and images, audio,
+                            video and fonts are turned into blob URLs on the
+                            fly. A real multi-file project renders exactly like
+                            it would on a server — with no server.
+                        </li>
+                        <li>
+                            <strong>Safety on failure.</strong> If the preview
+                            cannot update because of a mistake in the code, the
+                            last good version stays on screen. You never lose
+                            the preview because of one missing quote.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ EDITOR ============ -->
+            <section>
+                <h2>The editor</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        A code editor is only as good as its editor pane.
+                        LiveCode has everything a modern editor is expected to
+                        have, tuned for a phone screen and a physical keyboard.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Syntax highlighting for HTML, CSS and
+                            JavaScript</strong>, with the VS Code Dark+ colour
+                            palette as the default.
+                        </li>
+                        <li>
+                            <strong>Line numbers</strong> that are only as wide
+                            as the biggest number on screen — no wasted gutter
+                            space.
+                        </li>
+                        <li>
+                            <strong>Indent guides</strong> — thin vertical lines
+                            inside the code so you can see nesting at a glance.
+                        </li>
+                        <li>
+                            <strong>Stair indentation on Enter.</strong> Put
+                            the cursor between <code>&lt;body&gt;&lt;/body&gt;</code>
+                            and press Enter — you get three lines: the opening
+                            tag, an indented middle line, and the closing tag,
+                            all correctly placed. Works the same for
+                            <code>{ }</code>, <code>[ ]</code>, and
+                            <code>( )</code>. Nested tags build a proper stair
+                            pattern as you go deeper.
+                        </li>
+                        <li>
+                            <strong>Auto-close tags.</strong> Type
+                            <code>&lt;div&gt;</code> and the closing
+                            <code>&lt;/div&gt;</code> appears automatically,
+                            with the cursor in the middle.
+                        </li>
+                        <li>
+                            <strong>Auto-rename matched tags.</strong> Change
+                            <code>&lt;div&gt;</code> to
+                            <code>&lt;section&gt;</code> and the matching
+                            <code>&lt;/div&gt;</code> becomes
+                            <code>&lt;/section&gt;</code> at the same time.
+                        </li>
+                        <li>
+                            <strong>Auto-close brackets and quotes</strong>,
+                            with smart type-over so typing a closing bracket
+                            moves the cursor past it instead of inserting
+                            another one.
+                        </li>
+                        <li>
+                            <strong>Emmet.</strong> Type <code>!</code> and Tab
+                            to get a full HTML5 boilerplate. Type
+                            <code>ul&gt;li*3</code> and Tab to get three list
+                            items. Type <code>a[href=#]{Link}</code> and Tab to
+                            get a complete anchor. CSS abbreviations like
+                            <code>df</code>, <code>jcc</code>,
+                            <code>m10</code>, <code>w100p</code>,
+                            <code>fz16</code>, <code>br8</code> all expand too.
+                        </li>
+                        <li>
+                            <strong>CSS smart typing.</strong> Type
+                            <code>color:</code> and the semicolon is inserted
+                            for you, with the cursor between the colon and the
+                            semicolon, ready for the value. Type the final
+                            semicolon yourself and the cursor just moves past
+                            it.
+                        </li>
+                        <li>
+                            <strong>Pinch to change font size</strong> directly
+                            on the code, without opening any menu.
+                        </li>
+                        <li>
+                            <strong>Word wrap toggle</strong> for long lines.
+                        </li>
+                        <li>
+                            <strong>Active line highlight</strong> — optional,
+                            off by default.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ FORMATTER ============ -->
+            <section>
+                <h2>The formatter</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        A built-in code formatter for all three languages,
+                        written by hand and running entirely offline.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>HTML.</strong> Nested indentation, inline
+                            tags kept on the same line as their content, void
+                            tags handled correctly, long attribute lists split
+                            one per line.
+                        </li>
+                        <li>
+                            <strong>CSS.</strong> One property per line, one
+                            selector per line when several share a rule, nested
+                            at-rules indented properly, values tidied without
+                            touching strings or <code>url(...)</code> contents.
+                        </li>
+                        <li>
+                            <strong>JavaScript.</strong> Reindented by braces
+                            and brackets, with strings, template literals,
+                            regex and comments never modified.
+                        </li>
+                        <li>
+                            <strong>Format on save</strong> as an optional
+                            setting. Turn it on and every save cleans the file
+                            first.
+                        </li>
+                        <li>
+                            <strong>Format the whole file</strong> or just the
+                            selected lines, with separate shortcuts for each.
+                        </li>
+                        <li>
+                            <strong>Safety check.</strong> After formatting,
+                            the code is compared with the original. If anything
+                            but whitespace changed, the formatter leaves the
+                            file alone and shows a warning instead of
+                            destroying your work.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ PANELS ============ -->
+            <section>
+                <h2>Panels — every one movable and adjustable</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        Every menu and dialog in the app is a floating panel.
+                        Panels are not pop-ups and they are not fixed windows.
+                        They behave like small windows on a desktop.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Drag anywhere</strong> by the header. A
+                            panel can sit on the left, the right, or the middle
+                            of the screen, wherever you want it.
+                        </li>
+                        <li>
+                            <strong>Resize freely</strong> by dragging the
+                            bottom-right corner.
+                        </li>
+                        <li>
+                            <strong>Pinch to scale</strong> the whole panel with
+                            two fingers.
+                        </li>
+                        <li>
+                            <strong>Adjustable transparency</strong> — every
+                            panel has an opacity slider so you can keep reading
+                            the code behind it while you change a setting.
+                        </li>
+                        <li>
+                            <strong>Multiple panels at once.</strong> Open the
+                            Settings, the Project tree, and the Preview panel
+                            side by side and use them together.
+                        </li>
+                        <li>
+                            <strong>Remembered positions.</strong> Close the app,
+                            open it again — every panel is exactly where you
+                            left it, at the same size and the same opacity.
+                        </li>
+                        <li>
+                            <strong>Seven panels in total.</strong> Main Menu,
+                            File, Project, Settings, Keyboard Shortcuts, Theme,
+                            Colors, and Preview.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ PROJECTS ============ -->
+            <section>
+                <h2>Projects, folders and files</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        Real multi-file projects, stored inside the app itself
+                        and opened without a server.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Unlimited projects</strong>, each with its
+                            own folder tree.
+                        </li>
+                        <li>
+                            <strong>Nested folders</strong> — create folders
+                            inside folders, as deep as you need.
+                        </li>
+                        <li>
+                            <strong>Files of any type</strong> — HTML, CSS, JS,
+                            JSON, Markdown, plain text, images, audio, video.
+                        </li>
+                        <li>
+                            <strong>Upload files from the phone</strong>
+                            directly into any folder. Text files open in the
+                            editor; images, audio and video are attached to the
+                            project and used by the preview.
+                        </li>
+                        <li>
+                            <strong>Rename anything</strong>, including the
+                            extension. Change <code>style.css</code> to
+                            <code>styles.css</code> and the file is updated
+                            everywhere.
+                        </li>
+                        <li>
+                            <strong>Cut, copy, duplicate, delete</strong> files
+                            and folders, with a proper clipboard that works
+                            across folders.
+                        </li>
+                        <li>
+                            <strong>Multi-file editing</strong> with a tab-like
+                            list of open files. Switch between them from a
+                            small panel next to the menu button.
+                        </li>
+                        <li>
+                            <strong>Automatic saving back to the project</strong>
+                            as you type, with a configurable delay.
+                        </li>
+                        <li>
+                            <strong>Import and export entire projects as
+                            <code>.zip</code></strong>, with a hand-written
+                            zip writer and reader — no library, no internet,
+                            no compression dependencies.
+                        </li>
+                        <li>
+                            <strong>Preview picks up project assets
+                            automatically.</strong> A
+                            <code>&lt;link rel="stylesheet"&gt;</code> in your
+                            HTML is replaced by the actual CSS file's contents.
+                            A <code>&lt;script src="app.js"&gt;</code> becomes
+                            the actual script. An
+                            <code>&lt;img src="logo.png"&gt;</code> is loaded
+                            from the project as a blob. Relative paths, parent
+                            folders, and <code>./</code> prefixes all resolve
+                            the way they should.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ SETTINGS ============ -->
+            <section>
+                <h2>Settings — everything is controllable</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        A single Settings panel with more than thirty toggles,
+                        grouped by purpose. Every setting takes effect instantly
+                        and is saved for next time.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Indentation.</strong> Indent size (2, 4, 8
+                            or any value in between), spaces or tabs, auto
+                            indent on Enter, stair indent between tags, stair
+                            indent between braces.
+                        </li>
+                        <li>
+                            <strong>Tags and brackets.</strong> Auto-close tags,
+                            auto-close brackets, auto-close quotes, auto-rename
+                            matched tags, type-over closing brackets, CSS
+                            automatic semicolons, skip over existing
+                            semicolons.
+                        </li>
+                        <li>
+                            <strong>Emmet.</strong> Toggle HTML Emmet, CSS
+                            Emmet, and expansion on Tab separately.
+                        </li>
+                        <li>
+                            <strong>View.</strong> Line numbers on or off,
+                            indent guides on or off, active-line highlight,
+                            word wrap, font size.
+                        </li>
+                        <li>
+                            <strong>Files.</strong> Auto-save, auto-save delay,
+                            confirmation before delete.
+                        </li>
+                        <li>
+                            <strong>Preview.</strong> Live refresh, refresh
+                            delay, preserve scroll position, preserve zoom,
+                            break long words, default width, default height,
+                            default zoom.
+                        </li>
+                        <li>
+                            <strong>Interface.</strong> Show or hide corner
+                            buttons, corner-button transparency, panel
+                            transparency, editor-to-preview split ratio.
+                        </li>
+                        <li>
+                            <strong>Formatter.</strong> Indent size for the
+                            formatter (separate from the editor indent),
+                            format-on-save, keep inline tags inline.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ THEMES ============ -->
+            <section>
+                <h2>Themes and colours — fully customisable</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        Three themes and a colour picker that goes down to every
+                        individual piece of the interface.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Dark.</strong> Based on VS Code Dark+ — the
+                            same colours used by millions of developers every
+                            day.
+                        </li>
+                        <li>
+                            <strong>Light.</strong> The same set of colour slots,
+                            with darker text colours so the code stays readable
+                            on a white background.
+                        </li>
+                        <li>
+                            <strong>System.</strong> Follows the phone's system
+                            setting and changes automatically when the system
+                            theme changes.
+                        </li>
+                        <li>
+                            <strong>Every colour is editable.</strong>
+                            Background, foreground, borders, accent, editor
+                            background, editor text, line numbers, indent
+                            guides, selection, caret, and each of the nine
+                            syntax colours — tags, punctuation, attributes,
+                            strings, comments, keywords, numbers, functions,
+                            and classes — are all pickable.
+                        </li>
+                        <li>
+                            <strong>Per-theme overrides.</strong> Colours you
+                            change in the dark theme are kept separate from the
+                            light theme. Changing one does not affect the
+                            other.
+                        </li>
+                        <li>
+                            <strong>Reset options.</strong> Reset a single
+                            colour, reset an entire theme, or reset everything
+                            to the factory defaults, all from the same panel.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ KEYBOARD ============ -->
+            <section>
+                <h2>Keyboard — everything, without touching the screen</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        The whole app can be driven from a physical keyboard.
+                        Not just the code — the panels, the preview, the
+                        divider, the zoom, the theme, the file system, and the
+                        formatter.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Forty-plus shortcuts</strong> covering every
+                            action in the app.
+                        </li>
+                        <li>
+                            <strong>Panels.</strong> Open the menu, file panel,
+                            project panel, settings, keyboard list, theme,
+                            colours, or preview — each with its own key.
+                        </li>
+                        <li>
+                            <strong>Focus.</strong> Move the cursor to the
+                            editor or the preview with a single key.
+                        </li>
+                        <li>
+                            <strong>Divider.</strong> Grow or shrink the editor
+                            pane without touching the screen. Reset it to 50%
+                            with one more key.
+                        </li>
+                        <li>
+                            <strong>Preview control.</strong> Zoom in, zoom out,
+                            reset the zoom, change the preview width and height,
+                            fit, rotate, and reload — all from the keyboard.
+                        </li>
+                        <li>
+                            <strong>File actions.</strong> Save, Save As, New,
+                            Open — each with its own shortcut.
+                        </li>
+                        <li>
+                            <strong>Formatting.</strong> Format the whole
+                            document or just the selection.
+                        </li>
+                        <li>
+                            <strong>Editor actions.</strong> Toggle comment,
+                            duplicate line, delete line, move line up or down,
+                            select all.
+                        </li>
+                        <li>
+                            <strong>Theme.</strong> Cycle through themes or jump
+                            directly to dark, light, or system.
+                        </li>
+                        <li>
+                            <strong>Quick toggles.</strong> Word wrap, line
+                            numbers, indent guides, font size up and down.
+                        </li>
+                        <li>
+                            <strong>Rebindable.</strong> Every single shortcut
+                            can be changed from the Keyboard panel. Tap Set,
+                            press the new keys, and the app remembers. A
+                            conflict warning appears if the key combination is
+                            already in use.
+                        </li>
+                        <li>
+                            <strong>Conflict-safe defaults.</strong> Default
+                            shortcuts deliberately avoid key combinations that
+                            Chrome and Android reserve for themselves, so they
+                            always reach the app.
+                        </li>
+                        <li>
+                            <strong>Reset options.</strong> Reset one shortcut
+                            or reset every shortcut back to the defaults.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ LAYOUT ============ -->
+            <section>
+                <h2>Layout — no space is wasted</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        On a phone, every pixel matters. LiveCode does not have
+                        a title bar, a menu bar, a status bar, or a footer. The
+                        whole screen is code and preview.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Fullscreen from edge to edge.</strong> No
+                            header. No footer. No brand bar. Nothing between you
+                            and your work.
+                        </li>
+                        <li>
+                            <strong>Two panes with a draggable divider.</strong>
+                            Editor on top, preview below in portrait. Editor on
+                            the left, preview on the right in landscape. The
+                            divider moves freely, and its position is
+                            remembered.
+                        </li>
+                        <li>
+                            <strong>Corner buttons only.</strong> Two small
+                            semi-transparent buttons sit in the corner and let
+                            you open the menu and the preview panel. They can
+                            be hidden entirely from the settings if you do not
+                            want them.
+                        </li>
+                        <li>
+                            <strong>Adjustable transparency.</strong> Both
+                            corner buttons fade so they never distract from the
+                            code.
+                        </li>
+                        <li>
+                            <strong>Works in both orientations.</strong> Rotate
+                            the phone and the layout rearranges itself
+                            automatically — portrait stacks vertically,
+                            landscape splits horizontally.
+                        </li>
+                        <li>
+                            <strong>No wasted panels.</strong> Panels appear on
+                            demand and disappear when you close them. They take
+                            up zero space when not in use.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ OFFLINE ============ -->
+            <section>
+                <h2>Fully offline</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        Everything runs on the phone. No internet connection is
+                        required for any feature, at any time.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>No server.</strong> The app is a folder of
+                            files that the phone opens directly.
+                        </li>
+                        <li>
+                            <strong>No build step.</strong> No compile, no
+                            bundler, no dependencies to install.
+                        </li>
+                        <li>
+                            <strong>No CDN.</strong> No font, script, or library
+                            is fetched from the internet.
+                        </li>
+                        <li>
+                            <strong>Installable.</strong> Can be added to the
+                            phone's home screen and opened like a native app,
+                            with no browser chrome.
+                        </li>
+                        <li>
+                            <strong>Service worker cache.</strong> Every file
+                            the app needs is cached on first load, so the app
+                            opens instantly and works with airplane mode on.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============ CLOSING ============ -->
+            <section>
+                <h2>The result</h2>
+                <div class="story">
+                    <p style="margin-top: 0">
+                        The finished app is a single folder that turns an
+                        Android phone with a physical keyboard into a real
+                        development environment. No account. No subscription.
+                        No ads. No tracking. No internet. Just the phone, the
+                        keyboard, and the code.
+                    </p>
+                    <p style="margin-bottom: 0">
+                        The idea, the layout, the structure, the settings, and
+                        every design decision are the author's. The code itself
+                        was written with assistance from the AI tools listed
+                        above.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ============ FOOTER ============ -->
+            <footer>
+                LiveCodeツ<span class="dot">·</span>© 2026 乡ＡＬＩＡＲツ
+                <br />
+                Built on Android, for Android.
+            </footer>
+        </div>
+    </body>
+</html>
